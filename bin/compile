@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir>
+
+# Fail fast and fail hard.
+set -eo pipefail
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+
+FIXED_HOME=/app
+
+#echo "clearing the cache"
+#rm -rf $CACHE_DIR
+mkdir -p $CACHE_DIR
+
+# Set LD_LIBRARAY_PATH and link essential libraries
+mkdir -p $FIXED_HOME/usr/lib
+ln -s /usr/lib/libgmp.so.3.5.2 $FIXED_HOME/usr/lib/libgmp.so
+export LD_LIBRARY_PATH=$FIXED_HOME/usr/lib
+
