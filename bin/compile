@@ -16,5 +16,5 @@ mkdir -p $CACHE_DIR
 # Set LD_LIBRARAY_PATH and link essential libraries
 mkdir -p $FIXED_HOME/usr/lib
 ln -s /usr/lib/libgmp.so.3.5.2 $FIXED_HOME/usr/lib/libgmp.so
-export LD_LIBRARY_PATH=$FIXED_HOME/usr/lib
+export LD_LIBRARY_PATH=$FIXED_HOME/lib:$FIXED_HOME/usr/lib
 
