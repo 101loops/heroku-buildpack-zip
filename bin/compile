@@ -9,6 +9,8 @@ CACHE_DIR=$2
 
 FIXED_HOME=/app
 
+mkdir -p $FIXED_HOME/upload
+
 #echo "clearing the cache"
 #rm -rf $CACHE_DIR
 mkdir -p $CACHE_DIR
