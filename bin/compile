@@ -7,7 +7,11 @@ set -eo pipefail
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-# extract ZIP
+# extract ZIP to bin/
 mkdir -p $BUILD_DIR/bin
 cd $BUILD_DIR/bin
 jar xf $BUILD_DIR/*.zip
+
+# create profile
+mkdir -p ${BUILD}/.profile.d
+echo 'PATH=$PATH:$HOME/bin' > ${BUILD}/.profile.d/go.sh
