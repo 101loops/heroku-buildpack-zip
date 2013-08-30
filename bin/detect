@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo Binary
+echo ZIP
 exit 0
 
