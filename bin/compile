@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
 
-# Fail fast and fail hard.
+# fail fast and fail hard.
 set -eo pipefail
 
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-# extract
+# extract ZIP
 mkdir -p $BUILD_DIR/bin
 cd $BUILD_DIR/bin
 jar xf $BUILD_DIR/*.zip
