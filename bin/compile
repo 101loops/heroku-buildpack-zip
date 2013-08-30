@@ -8,4 +8,4 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 
 # extract ZIP
-jar xf $BUILD_DIR/*.zip
+jar xf *.zip
